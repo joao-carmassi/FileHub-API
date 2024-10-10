@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "sever.js",
   "scripts": {
-    "ngrok": "ngrok http 4040"
+    "server": "node server.js",
+    "ngrok": "ngrok http 4040",
+    "start": "npx concurrently \"npm run server\" \"npm run ngrok\""
   },
   "keywords": [],
   "author": "",
@@ -12,7 +14,8 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.21.0",
+    "currently": "^0.0.8",
+    "express": "^4.21.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.2.0",
     "localtunnel": "^2.0.2",
